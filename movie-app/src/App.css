@@ -1,0 +1,50 @@
+body {
+	background: #141414;
+	color: #ffffff;
+}
+
+.movie-app > .row {
+	overflow-x: auto;
+	flex-wrap: nowrap;
+}
+
+.image-container {
+	position: relative;
+	transition: transform 0.2s;
+}
+
+.image-container:hover {
+	cursor: pointer;
+	transform: scale(1);
+}
+
+.image-container:hover .overlay {
+	opacity: 1.1;
+}
+
+.overlay {
+	position: absolute;
+	background: rgba(0, 0, 0, 0.8);
+	width: 80%;
+	transition: 0.5s ease;
+	opacity: 0;
+	bottom: 0;
+	font-size: 15px;
+	padding: 10px;
+	text-align: center;
+}
+
+* Adjusted styles for .container-fluid with class .movie-app */
+.container-fluid.movie-app {
+	padding: 10px; /* Decrease the padding to adjust spacing between movie containers */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+/* Adjusted styles for .image-container to fit multiple containers in a row */
+.image-container {
+	flex: 0 0 calc(25% - 20px); /* Adjust the percentage to control container size */
+	margin: 10px; /* Add some margin to separate the movie containers */
+}
